@@ -12,6 +12,11 @@ export default function Home() {
           "How old your elder brother was 10 years before you was born, mate?"
         }
       />
+      <QuestionBox
+        question={
+          "How old your elder brother was 10 years before you was born, mate?"
+        }
+      />
 
       <AnswerOption state="inactive" text={"10 years"} label="A" />
       <AnswerOption state="correct" text={"10 years"} label="A" />

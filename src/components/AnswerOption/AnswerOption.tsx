@@ -1,3 +1,4 @@
+"use client";
 import styles from "./AnswerOption.module.css";
 
 type AnswerOptionProps = {
