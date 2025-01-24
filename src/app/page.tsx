@@ -1,6 +1,7 @@
 "use client";
 
 import { AnswerOption } from "@/components/AnswerOption";
+import { AnswerOptionTest } from "@/components/AnswerOptionTest";
 import { GameLayout } from "@/components/GameLayout";
 import { QuestionBox } from "@/components/QuestionBox/QuestionBox";
 
@@ -22,6 +23,10 @@ export default function Home() {
       <AnswerOption state="correct" text={"10 years"} label="A" />
       <AnswerOption state="wrong" text={"10 years"} label="A" />
       <AnswerOption state="selected" text={"10 years"} label="A" />
+
+      <div style={{ marginTop: 150 }}>
+        <AnswerOptionTest state="selected" text={"10 years"} label="A" />
+      </div>
     </GameLayout>
   );
 }
