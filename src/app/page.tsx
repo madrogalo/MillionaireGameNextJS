@@ -1,10 +1,5 @@
 "use client";
-
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Button } from "@/components/Button";
 import { GameLayout } from "@/components/GameLayout";
-import { Sidebar } from "@/components/Sidebar";
 
 export default function Home() {
   // const handleClick = () => {
