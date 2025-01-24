@@ -1,0 +1,69 @@
+.sidebar {
+  background-color: #222;
+  color: white;
+  height: 100vh;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.closeButton {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: static;
+    min-width: 300px;
+    width: 26%;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    transform: translateX(100%);
+  }
+
+  .openMobile {
+    transform: translateX(0);
+  }
+
+  .closedMobile {
+    transform: translateX(100%);
+  }
+
+  .closeButton {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.prizes {
+  list-style: none;
+  padding: 20px;
+}
+
+.prize {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.activePrize {
+  background-color: orange;
+}

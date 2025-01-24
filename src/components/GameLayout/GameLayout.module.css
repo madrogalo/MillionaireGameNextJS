@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .menuButton {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
