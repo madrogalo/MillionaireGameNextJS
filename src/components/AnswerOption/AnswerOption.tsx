@@ -33,8 +33,8 @@ export const AnswerOption: React.FC<AnswerOptionProps> = ({
       </svg>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="inherited"
-        height="inherited"
+        width="inherit"
+        height="inherit"
         viewBox="0 0 288 56"
         fill="none"
       >
