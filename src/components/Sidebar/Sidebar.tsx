@@ -1,3 +1,4 @@
+import { PrizeLadder } from "../PrizeLadder";
 import styles from "./Sidebar.module.css";
 
 type SidebarProps = {
@@ -15,12 +16,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
       <button className={styles.closeButton} onClick={closeSidebar}>
         ✕
       </button>
-      <ul className={styles.prizes}>
-        <li className={styles.prize}>$1,000,000</li>
-        <li className={styles.prize}>$500,000</li>
-        <li className={`${styles.prize} ${styles.activePrize}`}>$8,000</li>
-        <li className={styles.prize}>$4,000</li>
-      </ul>
+
+      <div style={{ marginTop: 150, marginBottom: 150 }}>
+        <PrizeLadder prize={"$10,000,000"} />
+        <PrizeLadder prize={"$1,000,000"} />
+        <PrizeLadder prize={"$100,000"} state="active" />
+        <PrizeLadder prize={"$10,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+        <PrizeLadder prize={"$1,000"} state="inactive" />
+      </div>
     </aside>
   );
 };

@@ -1,5 +1,6 @@
 .sidebar {
   background-color: #222;
+  background-color: var(--Black-5);
   color: white;
   height: 100vh;
   overflow-y: auto;
@@ -18,6 +19,7 @@
     min-width: 300px;
     width: 26%;
     transform: translateX(0);
+    background-color: var(--White-100);
   }
 }
 
@@ -45,24 +47,14 @@
     right: 10px;
     background: none;
     border: none;
-    color: white;
+    color: var(--Black-100);
     font-size: 24px;
     cursor: pointer;
   }
 }
 
-.prizes {
-  list-style: none;
-  padding: 20px;
-}
 
-.prize {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #333;
-  border-radius: 5px;
-  text-align: center;
-}
+
 
 .activePrize {
   background-color: orange;
