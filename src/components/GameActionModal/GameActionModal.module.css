@@ -1,0 +1,58 @@
+.gameActionModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modalBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top left, #ffeede 50%, #ffffff 50%);
+  z-index: -1;
+}
+
+.modalContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageContainer {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  color: #1c1c21;
+  font-weight: bold;
+  margin: 0;
+}
+
+.startButton {
+  background-color: var(--Orange-100, #ff8c00);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startButton:hover {
+  background-color: #ff7500;
+}
