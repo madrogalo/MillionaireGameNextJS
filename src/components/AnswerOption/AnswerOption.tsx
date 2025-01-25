@@ -23,7 +23,7 @@ export const AnswerOption: React.FC<AnswerOptionProps> = ({
         height="2"
         viewBox="0 0 17 2"
         fill="none"
-        style={{ marginRight: "-2px" }}
+        className={styles.svgLineLeft}
       >
         <path
           d="M0 1L17 1"
@@ -51,7 +51,7 @@ export const AnswerOption: React.FC<AnswerOptionProps> = ({
         height="2"
         viewBox="0 0 17 2"
         fill="none"
-        style={{ marginLeft: "-2px" }}
+        className={styles.svgLineRight}
       >
         <path
           d="M0 1L17 1"
