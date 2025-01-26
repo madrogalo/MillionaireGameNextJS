@@ -15,8 +15,17 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top left, #ffeede 50%, #ffffff 50%);
+  background: linear-gradient(to top left, var(--Orange-5) 50%, var(--White-100) 50%);
   z-index: -1;
+}
+
+.textContainer {
+  font-style: normal;
+}
+
+.buttonContainer {
+  font-style: normal;
+  margin-bottom: 110px;
 }
 
 .modalContent {
@@ -27,32 +36,75 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  height: 100%;
+  justify-content: flex-end;
 }
 
 .imageContainer {
-  font-size: 100px;
-  margin-bottom: 10px;
+  position: relative;
+  width: 288px;
+  height: 192px;
+}
+
+.contentContainer {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
   font-size: 24px;
-  color: #1c1c21;
-  font-weight: bold;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--Black-100);
   margin: 0;
 }
 
-.startButton {
-  background-color: var(--Orange-100, #ff8c00);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%;
+  color: var(--Black-100);
+  opacity: 0.5
 }
 
-.startButton:hover {
-  background-color: #ff7500;
+@media (min-width: 768px) {
+  .imageContainer {
+    width: 624px;
+    height: 367px;
+  }
+
+  .modalContent {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 56px;
+    line-height: 116%;
+    text-align: left;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .subtitle {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%;
+    text-align: left;
+  }
+
+  .buttonContainer {
+    margin-top: 64px;
+    margin-bottom: 0;
+  }
 }

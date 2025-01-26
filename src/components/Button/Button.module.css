@@ -1,0 +1,34 @@
+.actionButton {
+  width: 288px;
+  height: 48px;
+  border-radius: 8px;
+  border: 0;
+  background: var(--Orange-100);
+  color: var(--White-100, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%;
+  transition: .3s;
+}
+
+.actionButton:hover {
+  transition: .3s;
+  background: var(--Orange-80);
+}
+
+.actionButton:active {
+  transition: 0.1s;
+  background: var(--Orange-120);
+}
+
+@media (min-width: 768px) {
+  .actionButton {
+    width: 296px;
+    height: 64px;
+    flex-shrink: 0;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+}
