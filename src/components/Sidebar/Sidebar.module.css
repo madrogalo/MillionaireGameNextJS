@@ -13,6 +13,17 @@
   display: none;
 }
 
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.sidebarItem {
+  margin-bottom: 8px;
+}
+
 @media (min-width: 768px) {
   .sidebar {
     position: static;
@@ -52,9 +63,6 @@
     cursor: pointer;
   }
 }
-
-
-
 
 .activePrize {
   background-color: orange;

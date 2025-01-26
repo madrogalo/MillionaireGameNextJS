@@ -4,24 +4,17 @@
   align-items: center;
   width: 320px;
   height: 56px;
+  transition: 0.5s;
 }
 
 .svgWrapper:hover .svgStroke {
   stroke: var(--Orange-100);
+  transition: 0.5s;
 }
-
-.svgLineRight {
-  margin-left: -2px;
-}
-
-.svgLineLeft {
-  margin-right: -2px;
-}
-
 
 .label {
   position: absolute;
-  left: 64px;
+  left: 40px;
   color: var(--Orange-100);
   font-size: 14px;
   font-weight: 600;
@@ -31,7 +24,7 @@
 
 .text {
   position: absolute;
-  left: 83px;
+  left: 60px;
   color: var(--Black-100);
   font-size: 14px;
   font-style: normal;
@@ -65,22 +58,48 @@
   fill: var(--Red-5);
 }
 
+.svgWrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  background-color: var(--Black-40);
+  z-index: -1;
+}
+
+.svgWrapper.inactive::before {
+  background-color: var(--Black-40);
+}
+
+.svgWrapper.wrong::before {
+  background-color: var(--Red-100);
+}
+
+.svgWrapper.selected::before {
+  background-color: var(--Orange-100);
+}
+
+.svgWrapper.correct::before {
+  background-color: var(--Green-100);
+}
+
+.svgWrapper:hover::before {
+  background-color: var(--Orange-100);
+  transition: 0.5s;
+}
+
 @media (min-width: 768px) {
   .svgWrapper {
     width: 421px;
     height: 72px;
   }
 
-  .svgLineRight {
-    margin-left: -26px;
-  }
-
-  .svgLineLeft {
-    margin-right: -26px;
-  }
-
   .label {
     font-size: 20px;
+    left: 64px;
   }
 
   .text {

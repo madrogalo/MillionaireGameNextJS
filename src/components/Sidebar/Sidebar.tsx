@@ -17,19 +17,26 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
         ✕
       </button>
 
-      <div style={{ marginTop: 150, marginBottom: 150 }}>
-        <PrizeLadder prize={"$10,000,000"} />
-        <PrizeLadder prize={"$1,000,000"} />
-        <PrizeLadder prize={"$100,000"} state="active" />
-        <PrizeLadder prize={"$10,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
-        <PrizeLadder prize={"$1,000"} state="inactive" />
+      <div className={styles.sidebarContent}>
+        <div className={styles.sidebarItem}>
+          <PrizeLadder prize={"$1,000,000"} />
+        </div>
+        <div className={styles.sidebarItem}>
+          <PrizeLadder prize={"$500,000"} />
+        </div>
+
+        <div className={styles.sidebarItem}>
+          <PrizeLadder prize={"$200,000"} />
+        </div>
+        <div className={styles.sidebarItem}>
+          <PrizeLadder prize={"$100,000"} state="active" />
+        </div>
+        <div className={styles.sidebarItem}>
+          <PrizeLadder prize={"$1,000"} state="inactive" />
+        </div>
+        <div className={styles.sidebarItem}>
+          <PrizeLadder prize={"$500"} state="inactive" />
+        </div>
       </div>
     </aside>
   );
