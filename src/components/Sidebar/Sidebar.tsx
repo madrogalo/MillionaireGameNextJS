@@ -2,8 +2,9 @@
 
 import { useGameStore } from '@/app/store/gameStore';
 import { PrizeLadder } from '../PrizeLadder';
-import styles from './Sidebar.module.css';
 import { MenuButton } from '../MenuButton';
+
+import styles from './Sidebar.module.css';
 
 type SidebarProps = {
   isOpen: boolean;

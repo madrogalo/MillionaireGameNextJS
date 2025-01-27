@@ -1,13 +1,13 @@
 'use client';
+import { useEffect } from 'react';
 import { useGameStore } from '@/app/store/gameStore';
 
 import { AnswerOption } from '@/components/AnswerOption';
-
 import { GameLayout } from '@/components/GameLayout';
 import { QuestionBox } from '@/components/QuestionBox/QuestionBox';
+import Spinner from '@/components/Spinner/Spinner';
 
 import styles from './page.module.css';
-import { useEffect } from 'react';
 
 export default function Home() {
   const {
@@ -21,10 +21,10 @@ export default function Home() {
 
   useEffect(() => {
     fetchQuestions();
-  }, []);
+  }, [fetchQuestions]);
 
   const currentQuestion = questions[currentQuestionIndex];
-  if (!currentQuestion) return <div>Loading...</div>;
+  if (!currentQuestion) return <Spinner />;
   const getAlphabetLabel = (index: number): string => {
     return String.fromCharCode(65 + index);
   };
