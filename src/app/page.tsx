@@ -26,7 +26,7 @@ export default function Home() {
   const currentQuestion = questions[currentQuestionIndex];
   if (!currentQuestion) return <div>Loading...</div>;
   const getAlphabetLabel = (index: number): string => {
-    return String.fromCharCode(65 + index); // 65 — код символу 'A' в ASCII
+    return String.fromCharCode(65 + index);
   };
   return (
     <GameLayout>
