@@ -1,13 +1,13 @@
-"use client";
-import { useGameStore } from "@/app/store/gameStore";
+'use client';
+import { useGameStore } from '@/app/store/gameStore';
 
-import { AnswerOption } from "@/components/AnswerOption";
+import { AnswerOption } from '@/components/AnswerOption';
 
-import { GameLayout } from "@/components/GameLayout";
-import { QuestionBox } from "@/components/QuestionBox/QuestionBox";
+import { GameLayout } from '@/components/GameLayout';
+import { QuestionBox } from '@/components/QuestionBox/QuestionBox';
 
-import styles from "./page.module.css";
-import { useEffect } from "react";
+import styles from './page.module.css';
+import { useEffect } from 'react';
 
 export default function Home() {
   const {
@@ -40,8 +40,8 @@ export default function Home() {
             <AnswerOption
               state={
                 selectedAnswerId === answer.id
-                  ? answerState ?? "inactive"
-                  : "inactive"
+                  ? (answerState ?? 'inactive')
+                  : 'inactive'
               }
               text={answer.text}
               label={getAlphabetLabel(idx)}

@@ -14,7 +14,7 @@
 
 .prize {
   position: absolute;
-  color: var(--Black-100, #1C1C21);
+  color: var(--Black-100, #1c1c21);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -22,7 +22,6 @@
 }
 
 @media (min-width: 768px) {
-
   .prizeLadder svg {
     width: 240px;
   }
@@ -49,7 +48,7 @@
 }
 
 .prizeLadder::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 0;

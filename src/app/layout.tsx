@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 const geistInter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  variable: '--font-inter',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Who Wants to Be a Millionaire?",
-  description: "A quiz game built with Next.js",
+  title: 'Who Wants to Be a Millionaire?',
+  description: 'A quiz game built with Next.js',
 };
 
 export default function RootLayout({

@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 type Answer = {
   id: number;
@@ -19,7 +19,7 @@ type GameState = {
   currentQuestionIndex: number;
   score: string;
   selectedAnswerId: number | null;
-  answerState: "inactive" | "correct" | "wrong" | null;
+  answerState: 'inactive' | 'correct' | 'wrong' | null;
   isGameOver: boolean;
   isGameActionModalOpen: boolean;
 
@@ -34,7 +34,7 @@ type GameState = {
 export const useGameStore = create<GameState>((set, get) => ({
   questions: [],
   currentQuestionIndex: 0,
-  score: "$0",
+  score: '$0',
   selectedAnswerId: null,
   answerState: null,
   isGameOver: false,
@@ -42,18 +42,18 @@ export const useGameStore = create<GameState>((set, get) => ({
   isFirstStart: true,
   fetchQuestions: async () => {
     try {
-      const response = await fetch("/questions.json");
+      const response = await fetch('/questions.json');
       const data = await response.json();
       set({ questions: data });
     } catch (error) {
-      console.error("Failed to fetch questions:", error);
+      console.error('Failed to fetch questions:', error);
     }
   },
 
   answerQuestion: (answerId, isCorrect) => {
     set({
       selectedAnswerId: answerId,
-      answerState: isCorrect ? "correct" : "wrong",
+      answerState: isCorrect ? 'correct' : 'wrong',
     });
 
     setTimeout(() => {
@@ -82,7 +82,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   startGame: () => {
     set({
       currentQuestionIndex: 0,
-      score: "$0",
+      score: '$0',
       isGameOver: false,
       isGameActionModalOpen: false,
       isFirstStart: false,
@@ -94,7 +94,7 @@ export const useGameStore = create<GameState>((set, get) => ({
   restartGame: () => {
     set({
       currentQuestionIndex: 0,
-      score: "$0",
+      score: '$0',
       isGameOver: false,
       isGameActionModalOpen: get().isFirstStart,
       selectedAnswerId: null,

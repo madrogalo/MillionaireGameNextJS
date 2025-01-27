@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Sidebar } from "../Sidebar";
-import styles from "./GameLayout.module.css";
-import { GameActionModal } from "../GameActionModal";
-import { useGameStore } from "@/app/store/gameStore";
-import { MenuButton } from "../MenuButton";
+import { useState } from 'react';
+import { Sidebar } from '../Sidebar';
+import styles from './GameLayout.module.css';
+import { GameActionModal } from '../GameActionModal';
+import { useGameStore } from '@/app/store/gameStore';
+import { MenuButton } from '../MenuButton';
 
 type LayoutProps = {
   children: React.ReactNode;

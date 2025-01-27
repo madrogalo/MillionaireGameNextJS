@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useGameStore } from "@/app/store/gameStore";
-import { PrizeLadder } from "../PrizeLadder";
-import styles from "./Sidebar.module.css";
-import { MenuButton } from "../MenuButton";
+import { useGameStore } from '@/app/store/gameStore';
+import { PrizeLadder } from '../PrizeLadder';
+import styles from './Sidebar.module.css';
+import { MenuButton } from '../MenuButton';
 
 type SidebarProps = {
   isOpen: boolean;
@@ -30,10 +30,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
               prize={question.prize}
               state={
                 currentQuestionIndex === index
-                  ? "active"
+                  ? 'active'
                   : currentQuestionIndex > index
-                  ? "inactive"
-                  : "default"
+                    ? 'inactive'
+                    : 'default'
               }
             />
           </div>

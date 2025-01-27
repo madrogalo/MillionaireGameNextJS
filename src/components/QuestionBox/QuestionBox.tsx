@@ -1,5 +1,5 @@
-"use client";
-import styles from "./QuestionBox.module.css";
+'use client';
+import styles from './QuestionBox.module.css';
 
 type QuestionBoxProps = {
   question: string;

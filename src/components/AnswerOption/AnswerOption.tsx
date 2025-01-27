@@ -1,8 +1,8 @@
-"use client";
-import styles from "./AnswerOption.module.css";
+'use client';
+import styles from './AnswerOption.module.css';
 
 type AnswerOptionProps = {
-  state?: "inactive" | "selected" | "correct" | "wrong" | "hover";
+  state?: 'inactive' | 'selected' | 'correct' | 'wrong' | 'hover';
   text: string;
   label: string;
   onClick: () => void;
@@ -11,7 +11,7 @@ type AnswerOptionProps = {
 export const AnswerOption: React.FC<AnswerOptionProps> = ({
   label,
   text,
-  state = "inactive",
+  state = 'inactive',
   onClick,
 }) => {
   return (

@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Image from "next/image";
-import styles from "./GameActionModal.module.css";
-import { Button } from "../Button";
+import { useState } from 'react';
+import Image from 'next/image';
+import styles from './GameActionModal.module.css';
+import { Button } from '../Button';
 
 type GameActionModalProps = {
   isOpen: boolean;
@@ -59,7 +59,7 @@ export const GameActionModal: React.FC<GameActionModalProps> = ({
 
           <div className={styles.buttonContainer}>
             <Button
-              title={isGameFinished ? "Try again" : "Start"}
+              title={isGameFinished ? 'Try again' : 'Start'}
               onClick={handleAction}
             />
           </div>

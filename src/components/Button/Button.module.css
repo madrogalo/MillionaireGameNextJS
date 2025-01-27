@@ -4,17 +4,17 @@
   border-radius: 8px;
   border: 0;
   background: var(--Orange-100);
-  color: var(--White-100, #FFF);
+  color: var(--White-100, #fff);
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 116%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .actionButton:hover {
-  transition: .3s;
+  transition: 0.3s;
   background: var(--Orange-80);
 }
 

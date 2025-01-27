@@ -6,7 +6,6 @@
   padding: 0 16px;
 }
 
-
 .answerSection {
   height: calc(48vh - 16px);
   display: flex;
@@ -17,7 +16,6 @@
 .answerItem {
   margin-bottom: 8px;
 }
-
 
 @media (min-width: 768px) {
   .questionArea {

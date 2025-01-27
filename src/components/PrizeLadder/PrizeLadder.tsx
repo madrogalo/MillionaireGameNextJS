@@ -1,13 +1,13 @@
-import styles from "./PrizeLadder.module.css";
+import styles from './PrizeLadder.module.css';
 
 type PrizeLadderProps = {
   prize: string;
-  state?: "inactive" | "active" | "default";
+  state?: 'inactive' | 'active' | 'default';
 };
 
 export const PrizeLadder: React.FC<PrizeLadderProps> = ({
   prize,
-  state = "default",
+  state = 'default',
 }) => {
   return (
     <div className={`${styles.prizeLadder} ${styles[state]}`}>
