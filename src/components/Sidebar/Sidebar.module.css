@@ -54,13 +54,8 @@
   .closeButton {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: var(--Black-100);
-    font-size: 24px;
-    cursor: pointer;
+    top: 16px;
+    right: 16px;
   }
 }
 

@@ -33,11 +33,6 @@
   fill: var(--White-100);
 }
 
-.hover:hover {
-  border-color: #ffa500;
-  background-color: white;
-}
-
 .selected {
   stroke: var(--Orange-100);
   fill: var(--Orange-5);
@@ -105,5 +100,21 @@
   .svgWrapper:hover::before {
     background-color: var(--Orange-100);
     transition: 0.5s;
+  }
+
+  .svgWrapper.wrong:hover .svgStroke {
+    stroke: var(--Red-100);
+  }
+
+  .svgWrapper.correct:hover .svgStroke {
+    stroke: var(--Green-100);
+  }
+
+  .svgWrapper.wrong:hover::before {
+    background-color: var(--Red-100);
+  }
+
+  .svgWrapper.correct:hover::before {
+    background-color: var(--Green-100);
   }
 }

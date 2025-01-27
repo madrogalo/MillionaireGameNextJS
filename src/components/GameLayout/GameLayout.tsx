@@ -3,6 +3,7 @@ import { Sidebar } from "../Sidebar";
 import styles from "./GameLayout.module.css";
 import { GameActionModal } from "../GameActionModal";
 import { useGameStore } from "@/app/store/gameStore";
+import { MenuButton } from "../MenuButton";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -58,9 +59,12 @@ export const GameLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={styles.layout}>
       <main className={styles.main}>
-        <button className={styles.menuButton} onClick={openSidebar}>
+        {/* <button className={styles.menuButton} onClick={openSidebar}>
           ☰
-        </button>
+        </button> */}
+        <div className={styles.menuButton}>
+          <MenuButton variant="menu" onClick={openSidebar} />
+        </div>
         {children}
       </main>
       <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
