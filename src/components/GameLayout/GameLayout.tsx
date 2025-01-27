@@ -2,39 +2,40 @@ import { useState } from "react";
 import { Sidebar } from "../Sidebar";
 import styles from "./GameLayout.module.css";
 import { GameActionModal } from "../GameActionModal";
+import { useGameStore } from "@/app/store/gameStore";
 
 type LayoutProps = {
   children: React.ReactNode;
 };
 
 export const GameLayout: React.FC<LayoutProps> = ({ children }) => {
+  const {
+    isGameOver,
+    isGameActionModalOpen,
+    score,
+    closeGameActionModal,
+    restartGame,
+    startGame,
+  } = useGameStore();
+
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [isGameActionModal, setGameActionModalOpen] = useState(false);
-
-  const [isGameOver, setIsGameOver] = useState(true);
-
-  const handleStart = () => {
-    console.log("Game Started!");
-    setGameActionModalOpen(false);
-    setIsGameOver(false);
-  };
-
-  const handleRestart = () => {
-    console.log("Game Restarted!");
-    setGameActionModalOpen(false);
-    setIsGameOver(false);
-  };
 
   const openSidebar = () => setSidebarOpen(true);
   const closeSidebar = () => setSidebarOpen(false);
 
-  if (isGameActionModal) {
+  if (isGameActionModalOpen) {
     return (
       <GameActionModal
         title="Who wants to be a millionaire?"
-        isOpen={isGameActionModal}
-        onStart={handleStart}
-        onRestart={handleRestart}
+        isOpen={isGameActionModalOpen}
+        onStart={() => {
+          closeGameActionModal();
+          startGame();
+        }}
+        onRestart={() => {
+          closeGameActionModal();
+          restartGame();
+        }}
       />
     );
   }
@@ -42,10 +43,13 @@ export const GameLayout: React.FC<LayoutProps> = ({ children }) => {
   if (isGameOver) {
     return (
       <GameActionModal
-        title="$8,000 earned"
+        title={`${score} earned`}
         isOpen={isGameOver}
-        onStart={handleStart}
-        onRestart={handleRestart}
+        onStart={() => {
+          closeGameActionModal();
+          restartGame();
+        }}
+        onRestart={restartGame}
         isGameFinished
       />
     );

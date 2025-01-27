@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital of France?",
+    "answers": [
+      { "id": 1, "text": "Berlin", "isCorrect": false },
+      { "id": 2, "text": "Madrid", "isCorrect": false },
+      { "id": 3, "text": "Paris", "isCorrect": true },
+      { "id": 4, "text": "Rome", "isCorrect": false }
+    ],
+    "prize": "$1,000"
+  },
+  {
+    "id": 2,
+    "question": "Which planet is known as the Red Planet?",
+    "answers": [
+      { "id": 1, "text": "Venus", "isCorrect": false },
+      { "id": 2, "text": "Mars", "isCorrect": true },
+      { "id": 3, "text": "Jupiter", "isCorrect": false },
+      { "id": 4, "text": "Saturn", "isCorrect": false }
+    ],
+    "prize": "$2,000"
+  },
+  {
+    "id": 3,
+    "question": "What is 5 + 7?",
+    "answers": [
+      { "id": 1, "text": "10", "isCorrect": false },
+      { "id": 2, "text": "12", "isCorrect": true },
+      { "id": 3, "text": "14", "isCorrect": false },
+      { "id": 4, "text": "15", "isCorrect": false }
+    ],
+    "prize": "$3,000"
+  },
+  {
+    "id": 4,
+    "question": "Which animal is known as the king of the jungle?",
+    "answers": [
+      { "id": 1, "text": "Elephant", "isCorrect": false },
+      { "id": 2, "text": "Tiger", "isCorrect": false },
+      { "id": 3, "text": "Lion", "isCorrect": true },
+      { "id": 4, "text": "Giraffe", "isCorrect": false }
+    ],
+    "prize": "$5,000"
+  },
+  {
+    "id": 5,
+    "question": "What is the largest ocean on Earth?",
+    "answers": [
+      { "id": 1, "text": "Atlantic Ocean", "isCorrect": false },
+      { "id": 2, "text": "Pacific Ocean", "isCorrect": true },
+      { "id": 3, "text": "Indian Ocean", "isCorrect": false },
+      { "id": 4, "text": "Arctic Ocean", "isCorrect": false }
+    ],
+    "prize": "$10,000"
+  },
+  {
+    "id": 6,
+    "question": "What is the square root of 64?",
+    "answers": [
+      { "id": 1, "text": "6", "isCorrect": false },
+      { "id": 2, "text": "7", "isCorrect": false },
+      { "id": 3, "text": "8", "isCorrect": true },
+      { "id": 4, "text": "9", "isCorrect": false }
+    ],
+    "prize": "$20,000"
+  },
+  {
+    "id": 7,
+    "question": "Which country is famous for pizza?",
+    "answers": [
+      { "id": 1, "text": "France", "isCorrect": false },
+      { "id": 2, "text": "Italy", "isCorrect": true },
+      { "id": 3, "text": "Germany", "isCorrect": false },
+      { "id": 4, "text": "Spain", "isCorrect": false }
+    ],
+    "prize": "$30,000"
+  },
+  {
+    "id": 8,
+    "question": "How many legs does a spider have?",
+    "answers": [
+      { "id": 1, "text": "6", "isCorrect": false },
+      { "id": 2, "text": "8", "isCorrect": true },
+      { "id": 3, "text": "10", "isCorrect": false },
+      { "id": 4, "text": "12", "isCorrect": false }
+    ],
+    "prize": "$50,000"
+  },
+  {
+    "id": 9,
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "answers": [
+      { "id": 1, "text": "Charles Dickens", "isCorrect": false },
+      { "id": 2, "text": "J.K. Rowling", "isCorrect": false },
+      { "id": 3, "text": "William Shakespeare", "isCorrect": true },
+      { "id": 4, "text": "Mark Twain", "isCorrect": false }
+    ],
+    "prize": "$75,000"
+  },
+  {
+    "id": 10,
+    "question": "What is the boiling point of water in degrees Celsius?",
+    "answers": [
+      { "id": 1, "text": "50°C", "isCorrect": false },
+      { "id": 2, "text": "75°C", "isCorrect": false },
+      { "id": 3, "text": "100°C", "isCorrect": true },
+      { "id": 4, "text": "150°C", "isCorrect": false }
+    ],
+    "prize": "$100,000"
+  },
+  {
+    "id": 11,
+    "question": "What is the smallest unit of life?",
+    "answers": [
+      { "id": 1, "text": "Atom", "isCorrect": false },
+      { "id": 2, "text": "Molecule", "isCorrect": false },
+      { "id": 3, "text": "Cell", "isCorrect": true },
+      { "id": 4, "text": "Tissue", "isCorrect": false }
+    ],
+    "prize": "$250,000"
+  },
+  {
+    "id": 12,
+    "question": "Which color do you get when you mix red and blue?",
+    "answers": [
+      { "id": 1, "text": "Green", "isCorrect": false },
+      { "id": 2, "text": "Purple", "isCorrect": true },
+      { "id": 3, "text": "Orange", "isCorrect": false },
+      { "id": 4, "text": "Yellow", "isCorrect": false }
+    ],
+    "prize": "$1,000,000"
+  }
+]

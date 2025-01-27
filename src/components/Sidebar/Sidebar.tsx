@@ -1,3 +1,6 @@
+"use client";
+
+import { useGameStore } from "@/app/store/gameStore";
 import { PrizeLadder } from "../PrizeLadder";
 import styles from "./Sidebar.module.css";
 
@@ -7,6 +10,8 @@ type SidebarProps = {
 };
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
+  const { currentQuestionIndex, questions } = useGameStore();
+
   return (
     <aside
       className={`${styles.sidebar} ${
@@ -18,25 +23,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, closeSidebar }) => {
       </button>
 
       <div className={styles.sidebarContent}>
-        <div className={styles.sidebarItem}>
-          <PrizeLadder prize={"$1,000,000"} />
-        </div>
-        <div className={styles.sidebarItem}>
-          <PrizeLadder prize={"$500,000"} />
-        </div>
-
-        <div className={styles.sidebarItem}>
-          <PrizeLadder prize={"$200,000"} />
-        </div>
-        <div className={styles.sidebarItem}>
-          <PrizeLadder prize={"$100,000"} state="active" />
-        </div>
-        <div className={styles.sidebarItem}>
-          <PrizeLadder prize={"$1,000"} state="inactive" />
-        </div>
-        <div className={styles.sidebarItem}>
-          <PrizeLadder prize={"$500"} state="inactive" />
-        </div>
+        {questions.map((question, index) => (
+          <div key={index} className={styles.sidebarItem}>
+            <PrizeLadder
+              prize={question.prize}
+              state={
+                currentQuestionIndex === index
+                  ? "active"
+                  : currentQuestionIndex > index
+                  ? "inactive"
+                  : "default"
+              }
+            />
+          </div>
+        ))}
       </div>
     </aside>
   );

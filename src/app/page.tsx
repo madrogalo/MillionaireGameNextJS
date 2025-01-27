@@ -1,4 +1,5 @@
 "use client";
+import { useGameStore } from "@/app/store/gameStore";
 
 import { AnswerOption } from "@/components/AnswerOption";
 
@@ -6,31 +7,51 @@ import { GameLayout } from "@/components/GameLayout";
 import { QuestionBox } from "@/components/QuestionBox/QuestionBox";
 
 import styles from "./page.module.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  const {
+    questions,
+    currentQuestionIndex,
+    answerState,
+    selectedAnswerId,
+    fetchQuestions,
+    answerQuestion,
+  } = useGameStore();
+
+  useEffect(() => {
+    fetchQuestions();
+  }, []);
+
+  const currentQuestion = questions[currentQuestionIndex];
+  if (!currentQuestion) return <div>Loading...</div>;
+  const getAlphabetLabel = (index: number): string => {
+    return String.fromCharCode(65 + index); // 65 — код символу 'A' в ASCII
+  };
   return (
     <GameLayout>
       <div className={styles.questionArea}>
-        <QuestionBox
-          question={
-            "How old your elder brother was 10 years before you was born, mate?"
-          }
-        />
+        <QuestionBox question={currentQuestion.question} />
       </div>
 
       <div className={styles.answerSection}>
-        <div className={styles.answerItem}>
-          <AnswerOption state="inactive" text={"10 years"} label="A" />
-        </div>
-        <div className={styles.answerItem}>
-          <AnswerOption state="correct" text={"10 years"} label="A" />
-        </div>
-        <div className={styles.answerItem}>
-          <AnswerOption state="wrong" text={"30 years"} label="A" />
-        </div>
-        <div className={styles.answerItem}>
-          <AnswerOption state="selected" text={"20 years"} label="A" />
-        </div>
+        {currentQuestion.answers.map((answer, idx) => (
+          <div className={styles.answerItem} key={answer.id}>
+            <AnswerOption
+              state={
+                selectedAnswerId === answer.id
+                  ? answerState ?? "inactive"
+                  : "inactive"
+              }
+              text={answer.text}
+              label={getAlphabetLabel(idx)}
+              onClick={() =>
+                answerState === null &&
+                answerQuestion(answer.id, answer.isCorrect)
+              }
+            />
+          </div>
+        ))}
       </div>
     </GameLayout>
   );

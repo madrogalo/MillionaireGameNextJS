@@ -5,15 +5,17 @@ type AnswerOptionProps = {
   state?: "inactive" | "selected" | "correct" | "wrong" | "hover";
   text: string;
   label: string;
+  onClick: () => void;
 };
 
 export const AnswerOption: React.FC<AnswerOptionProps> = ({
   label,
   text,
   state = "inactive",
+  onClick,
 }) => {
   return (
-    <div className={`${styles.svgWrapper} ${styles[state]}`}>
+    <div onClick={onClick} className={`${styles.svgWrapper} ${styles[state]}`}>
       <div className={styles.label}>{label}</div>
       <div className={styles.text}>{text}</div>
       <svg

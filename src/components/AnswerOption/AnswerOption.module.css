@@ -7,11 +7,6 @@
   transition: 0.5s;
 }
 
-.svgWrapper:hover .svgStroke {
-  stroke: var(--Orange-100);
-  transition: 0.5s;
-}
-
 .label {
   position: absolute;
   left: 40px;
@@ -86,11 +81,6 @@
   background-color: var(--Green-100);
 }
 
-.svgWrapper:hover::before {
-  background-color: var(--Orange-100);
-  transition: 0.5s;
-}
-
 @media (min-width: 768px) {
   .svgWrapper {
     width: 421px;
@@ -105,5 +95,15 @@
   .text {
     font-size: 20px;
     left: 88px;
+  }
+
+  .svgWrapper:hover .svgStroke {
+    stroke: var(--Orange-100);
+    transition: 0.5s;
+  }
+
+  .svgWrapper:hover::before {
+    background-color: var(--Orange-100);
+    transition: 0.5s;
   }
 }
