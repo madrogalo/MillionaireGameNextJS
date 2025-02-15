@@ -3,7 +3,7 @@ import { create } from 'zustand';
 type Answer = {
   id: number;
   text: string;
-  isCorrect: boolean;
+  is_correct: boolean;
 };
 
 type Question = {
@@ -24,7 +24,7 @@ type GameState = {
   isGameActionModalOpen: boolean;
 
   fetchQuestions: () => Promise<void>;
-  answerQuestion: (answerId: number, isCorrect: boolean) => void;
+  answerQuestion: (answerId: number, is_correct: boolean) => void;
   startGame: () => void;
   restartGame: () => void;
   openGameActionModal: () => void;
@@ -42,22 +42,22 @@ export const useGameStore = create<GameState>((set, get) => ({
   isFirstStart: true,
   fetchQuestions: async () => {
     try {
-      const response = await fetch('/questions.json');
-      const data = await response.json();
+      const response = await fetch('/api/questions');
+      const { data } = await response.json();
       set({ questions: data });
     } catch (error) {
       console.error('Failed to fetch questions:', error);
     }
   },
 
-  answerQuestion: (answerId, isCorrect) => {
+  answerQuestion: (answerId, is_correct) => {
     set({
       selectedAnswerId: answerId,
-      answerState: isCorrect ? 'correct' : 'wrong',
+      answerState: is_correct ? 'correct' : 'wrong',
     });
 
     setTimeout(() => {
-      if (isCorrect) {
+      if (is_correct) {
         const { currentQuestionIndex, questions } = get();
 
         if (currentQuestionIndex + 1 >= questions.length) {

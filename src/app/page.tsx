@@ -47,7 +47,7 @@ export default function Home() {
               label={getAlphabetLabel(idx)}
               onClick={() =>
                 answerState === null &&
-                answerQuestion(answer.id, answer.isCorrect)
+                answerQuestion(answer.id, answer.is_correct)
               }
             />
           </div>

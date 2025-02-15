@@ -3,10 +3,10 @@
     "id": 1,
     "question": "What is the capital of France?",
     "answers": [
-      { "id": 1, "text": "Berlin", "isCorrect": false },
-      { "id": 2, "text": "Madrid", "isCorrect": false },
-      { "id": 3, "text": "Paris", "isCorrect": true },
-      { "id": 4, "text": "Rome", "isCorrect": false }
+      { "id": 1, "text": "Berlin", "is_correct": false },
+      { "id": 2, "text": "Madrid", "is_correct": false },
+      { "id": 3, "text": "Paris", "is_correct": true },
+      { "id": 4, "text": "Rome", "is_correct": false }
     ],
     "prize": "$500"
   },
@@ -14,10 +14,10 @@
     "id": 2,
     "question": "Which planet is known as the Red Planet?",
     "answers": [
-      { "id": 1, "text": "Venus", "isCorrect": false },
-      { "id": 2, "text": "Mars", "isCorrect": true },
-      { "id": 3, "text": "Jupiter", "isCorrect": false },
-      { "id": 4, "text": "Saturn", "isCorrect": false }
+      { "id": 1, "text": "Venus", "is_correct": false },
+      { "id": 2, "text": "Mars", "is_correct": true },
+      { "id": 3, "text": "Jupiter", "is_correct": false },
+      { "id": 4, "text": "Saturn", "is_correct": false }
     ],
     "prize": "$1,000"
   },
@@ -25,10 +25,10 @@
     "id": 3,
     "question": "What is 5 + 7?",
     "answers": [
-      { "id": 1, "text": "10", "isCorrect": false },
-      { "id": 2, "text": "12", "isCorrect": true },
-      { "id": 3, "text": "14", "isCorrect": false },
-      { "id": 4, "text": "15", "isCorrect": false }
+      { "id": 1, "text": "10", "is_correct": false },
+      { "id": 2, "text": "12", "is_correct": true },
+      { "id": 3, "text": "14", "is_correct": false },
+      { "id": 4, "text": "15", "is_correct": false }
     ],
     "prize": "$2,000"
   },
@@ -36,10 +36,10 @@
     "id": 4,
     "question": "Which animal is known as the king of the jungle?",
     "answers": [
-      { "id": 1, "text": "Elephant", "isCorrect": false },
-      { "id": 2, "text": "Tiger", "isCorrect": false },
-      { "id": 3, "text": "Lion", "isCorrect": true },
-      { "id": 4, "text": "Giraffe", "isCorrect": false }
+      { "id": 1, "text": "Elephant", "is_correct": false },
+      { "id": 2, "text": "Tiger", "is_correct": false },
+      { "id": 3, "text": "Lion", "is_correct": true },
+      { "id": 4, "text": "Giraffe", "is_correct": false }
     ],
     "prize": "$4,000"
   },
@@ -47,10 +47,10 @@
     "id": 5,
     "question": "What is the largest ocean on Earth?",
     "answers": [
-      { "id": 1, "text": "Atlantic Ocean", "isCorrect": false },
-      { "id": 2, "text": "Pacific Ocean", "isCorrect": true },
-      { "id": 3, "text": "Indian Ocean", "isCorrect": false },
-      { "id": 4, "text": "Arctic Ocean", "isCorrect": false }
+      { "id": 1, "text": "Atlantic Ocean", "is_correct": false },
+      { "id": 2, "text": "Pacific Ocean", "is_correct": true },
+      { "id": 3, "text": "Indian Ocean", "is_correct": false },
+      { "id": 4, "text": "Arctic Ocean", "is_correct": false }
     ],
     "prize": "$8,000"
   },
@@ -58,10 +58,10 @@
     "id": 6,
     "question": "What is the square root of 64?",
     "answers": [
-      { "id": 1, "text": "6", "isCorrect": false },
-      { "id": 2, "text": "7", "isCorrect": false },
-      { "id": 3, "text": "8", "isCorrect": true },
-      { "id": 4, "text": "9", "isCorrect": false }
+      { "id": 1, "text": "6", "is_correct": false },
+      { "id": 2, "text": "7", "is_correct": false },
+      { "id": 3, "text": "8", "is_correct": true },
+      { "id": 4, "text": "9", "is_correct": false }
     ],
     "prize": "$16,000"
   },
@@ -69,10 +69,10 @@
     "id": 7,
     "question": "Which country is famous for pizza?",
     "answers": [
-      { "id": 1, "text": "France", "isCorrect": false },
-      { "id": 2, "text": "Italy", "isCorrect": true },
-      { "id": 3, "text": "Germany", "isCorrect": false },
-      { "id": 4, "text": "Spain", "isCorrect": false }
+      { "id": 1, "text": "France", "is_correct": false },
+      { "id": 2, "text": "Italy", "is_correct": true },
+      { "id": 3, "text": "Germany", "is_correct": false },
+      { "id": 4, "text": "Spain", "is_correct": false }
     ],
     "prize": "$32,000"
   },
@@ -80,10 +80,10 @@
     "id": 8,
     "question": "How many legs does a spider have?",
     "answers": [
-      { "id": 1, "text": "6", "isCorrect": false },
-      { "id": 2, "text": "8", "isCorrect": true },
-      { "id": 3, "text": "10", "isCorrect": false },
-      { "id": 4, "text": "12", "isCorrect": false }
+      { "id": 1, "text": "6", "is_correct": false },
+      { "id": 2, "text": "8", "is_correct": true },
+      { "id": 3, "text": "10", "is_correct": false },
+      { "id": 4, "text": "12", "is_correct": false }
     ],
     "prize": "$64,000"
   },
@@ -91,10 +91,10 @@
     "id": 9,
     "question": "Who wrote 'Romeo and Juliet'?",
     "answers": [
-      { "id": 1, "text": "Charles Dickens", "isCorrect": false },
-      { "id": 2, "text": "J.K. Rowling", "isCorrect": false },
-      { "id": 3, "text": "William Shakespeare", "isCorrect": true },
-      { "id": 4, "text": "Mark Twain", "isCorrect": false }
+      { "id": 1, "text": "Charles Dickens", "is_correct": false },
+      { "id": 2, "text": "J.K. Rowling", "is_correct": false },
+      { "id": 3, "text": "William Shakespeare", "is_correct": true },
+      { "id": 4, "text": "Mark Twain", "is_correct": false }
     ],
     "prize": "$125,000"
   },
@@ -102,10 +102,10 @@
     "id": 10,
     "question": "What is the boiling point of water in degrees Celsius?",
     "answers": [
-      { "id": 1, "text": "50°C", "isCorrect": false },
-      { "id": 2, "text": "75°C", "isCorrect": false },
-      { "id": 3, "text": "100°C", "isCorrect": true },
-      { "id": 4, "text": "150°C", "isCorrect": false }
+      { "id": 1, "text": "50°C", "is_correct": false },
+      { "id": 2, "text": "75°C", "is_correct": false },
+      { "id": 3, "text": "100°C", "is_correct": true },
+      { "id": 4, "text": "150°C", "is_correct": false }
     ],
     "prize": "$250,000"
   },
@@ -113,10 +113,10 @@
     "id": 11,
     "question": "What is the smallest unit of life?",
     "answers": [
-      { "id": 1, "text": "Atom", "isCorrect": false },
-      { "id": 2, "text": "Molecule", "isCorrect": false },
-      { "id": 3, "text": "Cell", "isCorrect": true },
-      { "id": 4, "text": "Tissue", "isCorrect": false }
+      { "id": 1, "text": "Atom", "is_correct": false },
+      { "id": 2, "text": "Molecule", "is_correct": false },
+      { "id": 3, "text": "Cell", "is_correct": true },
+      { "id": 4, "text": "Tissue", "is_correct": false }
     ],
     "prize": "$500,000"
   },
@@ -124,10 +124,10 @@
     "id": 12,
     "question": "Which color do you get when you mix red and blue?",
     "answers": [
-      { "id": 1, "text": "Green", "isCorrect": false },
-      { "id": 2, "text": "Purple", "isCorrect": true },
-      { "id": 3, "text": "Orange", "isCorrect": false },
-      { "id": 4, "text": "Yellow", "isCorrect": false }
+      { "id": 1, "text": "Green", "is_correct": false },
+      { "id": 2, "text": "Purple", "is_correct": true },
+      { "id": 3, "text": "Orange", "is_correct": false },
+      { "id": 4, "text": "Yellow", "is_correct": false }
     ],
     "prize": "$1,000,000"
   }
