@@ -27,7 +27,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/lib/turso.js"
+    "src/app/lib/turso.js",
+    "src/__tests__/MenuButton/MenuButton.test.jsx",
+    "src/__tests__/PrizeLadder/PrizeLadder.test.jsx"
   ],
   "exclude": ["node_modules"]
 }

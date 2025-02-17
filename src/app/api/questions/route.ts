@@ -25,13 +25,10 @@ interface DeleteQuestionResponse {
 
 export async function GET() {
   try {
-    // We get all the questions
     const { rows: questions } = await db.execute('SELECT * FROM questions');
 
-    // We get all the answers in one request
     const { rows: answers } = await db.execute('SELECT * FROM answers');
 
-    // Add answers to relevant questions
     const questionsWithAnswers = questions.map((question) => ({
       ...question,
       answers: answers.filter((answer) => answer.question_id === question.id),
@@ -52,7 +49,6 @@ export async function POST(request: NextRequest) {
   try {
     const body: QuestionRequest = await request.json();
 
-    // Validate input data
     if (
       !body.question ||
       !body.prize ||
@@ -65,7 +61,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Add a question and get an Id
     const result = await db.execute({
       sql: 'INSERT INTO questions (question, prize) VALUES (?, ?)',
       args: [body.question, body.prize],
@@ -80,7 +75,6 @@ export async function POST(request: NextRequest) {
 
     const questionId = Number(result.lastInsertRowid);
 
-    // Add answers
     const answerPromises = body.answers.map((answer) =>
       db.execute({
         sql: 'INSERT INTO answers (question_id, text, is_correct) VALUES (?, ?, ?)',
@@ -88,7 +82,7 @@ export async function POST(request: NextRequest) {
       }),
     );
 
-    await Promise.all(answerPromises); // Execute all requests simultaneously
+    await Promise.all(answerPromises);
     return NextResponse.json(
       { success: true, message: 'Question and answers added', questionId },
       { status: 201 },
@@ -101,14 +95,12 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// Deleting questions by text
 export async function DELETE(
   request: NextRequest,
 ): Promise<NextResponse<DeleteQuestionResponse>> {
   try {
     const body: DeleteQuestionRequest = await request.json();
 
-    //  Validation of input data
     if (!body.question) {
       return NextResponse.json(
         { success: false, error: 'Question text is required' },
@@ -128,16 +120,13 @@ export async function DELETE(
       );
     }
 
-    // Get all question_ids to be deleted
     const questionIds: number[] = questions.map((q) => Number(q.id));
 
-    // Delete answers related to these questions
     await db.execute({
       sql: `DELETE FROM answers WHERE question_id IN (${questionIds.map(() => '?').join(',')})`,
       args: questionIds,
     });
 
-    // Delete the questions themselves
     await db.execute({
       sql: `DELETE FROM questions WHERE id IN (${questionIds.map(() => '?').join(',')})`,
       args: questionIds,

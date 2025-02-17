@@ -38,3 +38,29 @@ Open cli shell
 ```
 turso db shell communaldb
 ```
+
+## Testing
+
+Run tests
+
+```
+npm run test
+```
+
+Watching test
+
+```
+npm run test:watch
+```
+
+Show test coverage
+
+```
+npm test -- --coverage
+```
+
+Watching test with coverage in realtime
+
+```
+npm test -- --watchAll --coverage
+```

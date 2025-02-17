@@ -44,8 +44,8 @@ export const GameActionModal: React.FC<GameActionModalProps> = ({
             src="/hand1.svg"
             alt="Hand img"
             priority
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className={styles.contentContainer}>
