@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  background-color: var(--Red-5);
+  padding: 20px;
+}
+
+.formWrapper {
+  background: var(--White-100);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--Orange-80);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.answerRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.radio {
+  cursor: pointer;
+}
+
+.questionWrapper {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.answerWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.question {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--Orange-80);
+  padding-bottom: 15px;
+}
+
+.answer {
+  background-color: var(--Orange-120);
+  color: var(--White-100);
+  padding: 3px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.answerCorrect {
+  background-color: var(--Green-100);
+  color: var(--White-100);
+  padding: 3px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+.prize {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--Black-100);
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background: var(--Orange-100);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--Orange-80);
+}
+
+.message {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--Red-100);
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .formWrapper {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+
+}
