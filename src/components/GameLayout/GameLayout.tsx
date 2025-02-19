@@ -27,7 +27,7 @@ export const GameLayout: React.FC<LayoutProps> = ({ children }) => {
   if (isGameActionModalOpen) {
     return (
       <GameActionModal
-        title="Who wants to be a millionaire?"
+        title="Who wants to be a millionaire? 🎉"
         isOpen={isGameActionModalOpen}
         onStart={() => {
           closeGameActionModal();
